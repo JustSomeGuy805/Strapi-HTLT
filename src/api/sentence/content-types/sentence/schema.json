@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sentences",
+  "info": {
+    "singularName": "sentence",
+    "pluralName": "sentences",
+    "displayName": "Sentence",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "tagalog": {
+      "type": "text",
+      "required": true
+    },
+    "english": {
+      "type": "text"
+    }
+  }
+}

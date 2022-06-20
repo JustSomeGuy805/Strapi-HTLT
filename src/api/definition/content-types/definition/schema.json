@@ -1,0 +1,78 @@
+{
+  "kind": "collectionType",
+  "collectionName": "definitions",
+  "info": {
+    "singularName": "definition",
+    "pluralName": "definitions",
+    "displayName": "Definition",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "parent": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::word.word",
+      "inversedBy": "definitions"
+    },
+    "pos": {
+      "type": "enumeration",
+      "enum": [
+        "Noun - Common",
+        "Noun - Proper",
+        "Adjective - Common",
+        "Verb - Actor Focus",
+        "Verb - Object Focus",
+        "Verb - Beneficiary Focus",
+        "Verb - Location/Direction Focus",
+        "Preposition - Common",
+        "Conjunction - Common",
+        "Expression - Common",
+        "Other - Other"
+      ],
+      "required": true
+    },
+    "rating": {
+      "required": true,
+      "min": 0,
+      "type": "integer",
+      "max": 3
+    },
+    "isRoot": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "root": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::word.word"
+    },
+    "keywords": {
+      "type": "string"
+    },
+    "related": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::word.word"
+    },
+    "usageNotes": {
+      "type": "text"
+    },
+    "alternateSpellings": {
+      "type": "string"
+    },
+    "definition": {
+      "type": "text",
+      "required": true
+    },
+    "sentences": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::sentence.sentence"
+    }
+  }
+}
