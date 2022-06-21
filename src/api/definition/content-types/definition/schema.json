@@ -41,16 +41,6 @@
       "type": "integer",
       "max": 3
     },
-    "isRoot": {
-      "type": "boolean",
-      "default": false,
-      "required": true
-    },
-    "root": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::word.word"
-    },
     "keywords": {
       "type": "string"
     },
@@ -63,7 +53,7 @@
       "type": "text"
     },
     "alternateSpellings": {
-      "type": "string"
+      "type": "json"
     },
     "definition": {
       "type": "text",
