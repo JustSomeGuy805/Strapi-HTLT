@@ -21,6 +21,13 @@
       "required": true,
       "unique": true
     },
+    "rating": {
+      "type": "integer",
+      "default": 1,
+      "required": true,
+      "max": 4,
+      "min": 1
+    },
     "isRoot": {
       "type": "boolean",
       "default": false,
